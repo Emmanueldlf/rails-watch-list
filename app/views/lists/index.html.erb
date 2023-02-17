@@ -4,6 +4,7 @@
     <div>
       <li>
           <%= link_to list.name, list_path(list) %>
+          <%= cl_image_tag list.photo.key, :width => 100, :height => 150, :crop => :fill %>
           <p><%= link_to 'Delete', list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{list.name}?" } %></p>
 
       </li>
